@@ -1,6 +1,6 @@
 # array-trim
 
-Removes undefined, null, and empty strings from arrays.
+JavaScript module for trimming empty values from an array. Empty values are '', undefined, null, [], {}, and objects with no enumerable properties.
 
 ## Installation
 
