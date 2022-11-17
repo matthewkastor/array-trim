@@ -7,15 +7,25 @@
     "lib": "src"
   },
   "dependencies": {
-    "atropa-is-empty": ">=0.1.1"
+    "atropa-is-empty": "git+https://github.com/matthewkastor/atropa-is-empty.git#master"
   },
   "devDependencies": {
-    "browserify": ">=2.29.1",
-    "jasmine-node": ">=1.11.0"
+    "atropa-jsformatter": "git+https://github.com/matthewkastor/atropa-jsformatter.git#gh-pages",
+    "atropa-jslint": "git+https://github.com/matthewkastor/atropa-jslint.git#master",
+    "atropa-server": "git+https://github.com/matthewkastor/atropa-server.git#master",
+    "browserify": ">=17.0.0",
+    "jasmine-node": ">=1.11.0",
+    "jsdoc-toolkit": "git+https://github.com/matthewkastor/node-jsdoc-toolkit.git#fix-tests",
+    "atropa-jasmine-spec-runner-generator-html": "git+https://github.com/matthewkastor/atropa-jasmine-spec-runner-generator-html.git#gh-pages",
+    "plato": ">=0.6.2"
   },
   "scripts": {
-    "test": "jasmine-node specs/",
-    "buildBrowserModule": "node dev/browserify.js"
+    "lint": "atropa-jslint ./src/array-trim.js",
+    "srcFormat": "atropa-jsformatter ./src/array-trim.js ./src/array-trim.js",
+    "buildBrowserModule": "node dev/browserify.js",
+    "buildDocs": "jsdoc-toolkit -v -d=./docs/jsdoc/ -r -s src/",
+    "buildVsdocs": "jsdoc-toolkit -v -d=./docs/vsdoc/ -t=./node_modules/jsdoc-toolkit/templates/vsdoc/ -r -s src/",
+    "test": "jasmine-node specs/"
   },
   "homepage": "https://github.com/matthewkastor/array-trim/",
   "bugs": "https://github.com/matthewkastor/array-trim/issues",
@@ -33,8 +43,8 @@
   },
   "licenses": [
     {
-        "type" : "gpl-3.0",
-        "url" : "http://www.gnu.org/licenses/gpl-3.0-standalone.html"
+      "type": "gpl-3.0",
+      "url": "http://www.gnu.org/licenses/gpl-3.0-standalone.html"
     }
   ]
 }

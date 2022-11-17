@@ -1,3 +1,16 @@
+/*jslint
+    indent: 4,
+    maxerr: 50,
+    white: true,
+    node: true,
+    browser: true,
+    devel: true,
+    plusplus: true,
+    regexp: true
+*/
+/*global atropa */
+// end header
+
 /**
  * Removes empty items from an array. Empty values are '', undefined, null, [],
  *  {}, and objects with no enumerable properties.
